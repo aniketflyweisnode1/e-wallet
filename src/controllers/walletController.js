@@ -121,4 +121,5 @@ const updateDetails = async (req,res)=>{
 
 
 module.exports = { createAccount,updateDetails}
-git push --set-upstream origin otp
+
+// git push --set-upstream origin otp
