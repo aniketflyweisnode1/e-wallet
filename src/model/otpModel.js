@@ -13,5 +13,5 @@ module.exports.Otp = model('Otp', Schema({
         require:true
     },
     createdAt:{type:Date, default:Date.now, index: {expires:3600}}
-    //after 5 min it will deleted from dB
+    //after 1hr it will deleted from dB
 },{timestamps:true}))
