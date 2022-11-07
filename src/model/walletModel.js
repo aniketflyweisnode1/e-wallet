@@ -1,38 +1,32 @@
+const mongoose  =require("mongoose")
+const walletDetails = new mongoose.Schema({
 
-const {Schema,model} = require('mongoose');
-
-
-const userWalletSchema = Schema({
-    firstName: { 
-             type: String,
-             required: true 
-            },
-    lastName: { 
-             type: String,
-              required: true
-             },
-    email: { 
-            type: String,
-               required: true
-            },
-    phone:{
-           type:String,
-             required:true
-            },
-    password:{
-             type:String,
-            required:true
-        },
-    confirmPassword:{
-        type:String,
-        required:true
+    fullName: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    phoneNumber: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    confirmPassword: {
+      type: String,
+      required: true,
+    },
+    profileImage :{
+     type : String
     }
-
-},{ timestamps: true });
-
-
-
+  },
+  { timestamps: true }
+);
 
 
-
-module.exports.Wallet = model('Wallet',userWalletSchema) 
+module.exports = mongoose.model('addWallet', walletDetails)

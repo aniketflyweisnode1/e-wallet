@@ -5,7 +5,7 @@ const route = require('./route/route');
 const userRouter = require('./route/userRouter')
 const mongoose = require('mongoose');
 const app = express();
-let URI = "mongodb+srv://aniketflyweis:Flyweis@student.8yymmsy.mongodb.net/E-wallete?authSource=admin&replicaSet=atlas-v1orbd-shard-0&readPreference=primary&appname=E-wallet%20Compass&ssl=true"
+let URI = "mongodb+srv://aniketflyweis:Flyweis@student.8yymmsy.mongodb.net/Amit-E-wallet?authSource=admin&replicaSet=atlas-v1orbd-shard-0&readPreference=primary&appname=E-wallet%20Compass&ssl=true"
 const PORT = 8080
 
 app.use(bodyParser.json());

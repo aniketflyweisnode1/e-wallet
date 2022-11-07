@@ -15,7 +15,12 @@ const isValidString = (String) => {
     return /\d/.test(String)}
 
 
+   const isValidPhoneNumber = (PhoneNumber)=>{
+    return (/^(\+\d{1,3}[- ]?)?\d{10}$/.test(PhoneNumber))}
+        
+
+
  const isValidEmail = (Email) => {
         return  /^([A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6})+$/.test(Email)};
       
-module.exports = { isValid, isValidRequestBody,isValidString , isValidEmail}
+module.exports = { isValid, isValidRequestBody,isValidString ,isValidPhoneNumber, isValidEmail}

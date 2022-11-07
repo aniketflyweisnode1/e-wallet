@@ -14,8 +14,7 @@ require("dotenv").config();
 
 const { User} = require('../model/userModel')
 const{Otp} = require('../model/otpModel')
-const { model } = require('mongoose')
-const { use } = require('../route/route')
+// const loginModel  = require("../model/loginModel")
 
 module.exports.signUp = async(req,res)=>{
 
@@ -60,9 +59,6 @@ if(rightOtpFind.number == req.body.number && validUser){
     const user = new User(_.pick(req.body,['number']))
     const token = user.generateJWT();
     const result = await user.save()
-    const OTPDelete = await Otp.deleteMany({
-        number:rightOtpFind.number
-    })
     return res.status(200).send({
         message:"user Registation Success",
         token :token,
@@ -71,6 +67,7 @@ if(rightOtpFind.number == req.body.number && validUser){
     })
 
 }else{
-    return res.status(400).send('Your OTp was wrong')
+    return res.status(400).send('Your OTP was wrong')
 }
 }
+

@@ -1,4 +1,4 @@
-const cardModel = require("../model/addCardModel");
+const cardModel = require("../model/cardModel");
 const { isValid, isValidRequestBody } = require("../validator/validator");
 
 const createCard = async (req, res) => {
